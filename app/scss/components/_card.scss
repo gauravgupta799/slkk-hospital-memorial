@@ -1,0 +1,24 @@
+@use '../abstract/breakpoints' as *;
+@use '../abstract/colors' as *;
+@use "../abstract/fonts" as *;
+@use '../abstract/functions' as *;
+@use '../abstract/mixins' as *;
+
+
+.card{
+    background: $clr-white;
+    padding:em(48) em(32) em(32);
+
+    &__icon{
+
+    }
+    &__content{
+        text-align: center;
+    }
+    &__heading{
+        font-weight: 700;
+    }
+    &__desc{
+        text-align: justify;
+    }
+}

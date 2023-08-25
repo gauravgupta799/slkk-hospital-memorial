@@ -13,6 +13,14 @@
     object-fit:cover;
 }
 
+.h-100{
+    height: 100%;
+}
+
+.h-inherit{
+    height: inherit;
+}
+
 .text-primary{
     color:$clr-primary;
 }
@@ -53,6 +61,14 @@
 .bg--secondary{
     background: $clr-secondary;
 }
+
+.d-table{
+    display: table;
+}
+.d-cell{
+    display: table-cell;
+}
+
 
 // .section-heading{
 //     margin: 0 auto;

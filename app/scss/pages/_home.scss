@@ -1,0 +1,33 @@
+@use '../abstract/breakpoints' as *;
+@use '../abstract/colors' as *;
+@use "../abstract/fonts" as *;
+@use '../abstract/functions' as *;
+@use '../abstract/mixins' as *;
+
+
+.hero{
+    background: $clr-secondary;
+    h1{
+        font-family: $ff-bold;
+        font-weight: 700;
+    }
+
+    &__contents{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color:white;
+    }
+}
+
+.about{
+    &__contents{
+     
+    }
+}
+
+// Department styles
+.department{
+    background: $clr-secondary;
+}

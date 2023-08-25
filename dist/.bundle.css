@@ -348,7 +348,7 @@ p, ul, ol, body {
 @media screen and (min-width: 62em) {
   p, ul, ol, body {
     font-size: 1.125rem;
-    line-height: 2rem;
+    line-height: 2.25rem;
   }
 }
 @media screen and (min-width: 85.375em) {
@@ -373,6 +373,14 @@ p, ul, ol, body {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.h-inherit {
+  height: inherit;
 }
 
 .text-primary {
@@ -421,6 +429,14 @@ p, ul, ol, body {
 
 .bg--secondary {
   background: #4942E4;
+}
+
+.d-table {
+  display: table;
+}
+
+.d-cell {
+  display: table-cell;
 }
 
 .m-1 {
@@ -10311,6 +10327,184 @@ p, ul, ol, body {
   .pt--xxl--0 {
     padding-top: 0rem !important;
   }
+}
+
+.header {
+  background: #11009E;
+  background: #4942E4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding-block: 0.75em;
+}
+.header__logo {
+  display: flex;
+  height: 100%;
+}
+.header__logo a {
+  display: inline-flex;
+}
+.header__logo img {
+  width: 80px;
+  height: auto;
+  mix-blend-mode: screen;
+}
+.header__desktop-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero {
+  background: #4942E4;
+}
+.hero h1 {
+  font-family: "Poppins bold";
+  font-weight: 700;
+}
+.hero__contents {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+
+.department {
+  background: #4942E4;
+}
+
+.page-container {
+  max-width: none;
+  margin: 0 1rem;
+}
+@media only screen and (min-width: 36em) {
+  .page-container {
+    margin: 0 1.25rem;
+  }
+}
+@media only screen and (min-width: 48em) {
+  .page-container {
+    max-width: 90.55%;
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .page-container {
+    max-width: 87.55%;
+  }
+}
+@media only screen and (min-width: 85.375em) {
+  .page-container {
+    max-width: 87.55%;
+  }
+}
+@media only screen and (min-width: 100em) {
+  .page-container {
+    max-width: 85.55%;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  .page-container--ml {
+    max-width: 95.27%;
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .page-container--ml {
+    max-width: 93.775%;
+  }
+}
+@media only screen and (min-width: 85.375em) {
+  .page-container--ml {
+    max-width: 93.75%;
+  }
+}
+@media only screen and (min-width: 100em) {
+  .page-container--ml {
+    max-width: 82.77%;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  .page-container--mr {
+    max-width: 95.27%;
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .page-container--mr {
+    max-width: 93.775%;
+  }
+}
+@media only screen and (min-width: 85.375em) {
+  .page-container--mr {
+    max-width: 93.75%;
+  }
+}
+@media only screen and (min-width: 100em) {
+  .page-container--mr {
+    max-width: 82.77%;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.nav__menu {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.nav__link {
+  color: #fff;
+}
+
+.btn {
+  display: inline-block;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  padding: 0.3125em 1.8em;
+  color: #050505;
+  border-radius: 21px;
+  transition: all 0.5s ease-in-out;
+}
+@media only screen and (min-width: 36em) {
+  .btn {
+    font-size: 1rem;
+  }
+}
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn--primary {
+  background-color: #fff;
+  border: 1px solid #050505;
+  color: #050505;
+}
+
+.card {
+  background: #fff;
+  padding: 3em 2em 2em;
+}
+.card__content {
+  text-align: center;
+}
+.card__heading {
+  font-weight: 700;
+}
+.card__desc {
+  text-align: justify;
 }
 
 /*!

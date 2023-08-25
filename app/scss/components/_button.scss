@@ -1,0 +1,66 @@
+@use '../abstract/breakpoints' as *;
+@use '../abstract/colors' as *;
+@use "../abstract/fonts" as *;
+@use '../abstract/functions' as *;
+@use '../abstract/mixins' as *;
+
+.btn{
+    display: inline-block;
+    outline:none;
+    border:none;
+    font-size:rem(16);
+    padding: 0.3125em 1.8em;
+    color:$clr-black;
+    @include border-radius(21px);
+    @include transition(all, 0.5s, ease-in-out);
+
+    @include breakpoint-sm{
+        font-size:rem(16);
+    }
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+.btn--primary{
+    background-color:$clr-white;
+    border: 1px solid $clr-black;
+    color:$clr-black;
+}
+
+// .btn--secondary{
+//     background:transparent;
+//     font-family:$ff-light;
+//     font-weight: 300;
+//     font-size: rem(16);
+//     padding-inline:0;
+//     display: inline-flex;
+//     align-items: center;
+//     gap: rem(20);
+//     justify-content: center;
+//     @include breakpoint-md{
+//         font-size: rem(18);
+//     }
+//     &:hover{
+//        svg{
+//             text{
+//                 fill:$clr-secondary;
+//             }
+//             g[data-name="Ellipse 15"]{
+//                 fill:$clr-secondary;
+//             }
+//        }
+//     }
+// }
+
+// .btn-tertiary{
+//     background: $clr-primary;
+//     color:$clr-white-100;
+//     border: solid 1px $clr-border;
+//     &:hover{
+//         background: $clr-white-100;
+//         color:$clr-primary;
+//         border-color: $clr-primary;
+//     }
+// }
+
