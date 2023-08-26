@@ -9,6 +9,7 @@ const rename = require("gulp-rename");
  const browserSync = require('browser-sync').create();
 
  const cssFilesArray = [
+    "app/venders/swiper/css/swiper.css",
     "app/scss/main.scss",
  ];
 
@@ -34,6 +35,7 @@ function scssTaskMinified(){
 // Array of javascript files 
 const jsFilesArray = [
     "app/venders/jquery/jquery-3.7.0.min.js",
+    "app/venders/swiper/js/swiper-bundle.min.js",
     "app/js/main.js",
 ];
 

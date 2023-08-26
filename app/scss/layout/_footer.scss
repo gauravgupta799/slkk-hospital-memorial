@@ -1,0 +1,45 @@
+@use '../abstract/breakpoints' as *;
+@use '../abstract/colors' as *;
+@use "../abstract/fonts" as *;
+@use '../abstract/functions' as *;
+@use '../abstract/mixins' as *;
+
+.footer{
+    background: $clr-secondary;
+    &__bottom{
+        color:$clr-white;
+    }
+    &__list{
+        iframe{
+            width: 100%;
+            height: rem(200);
+        }
+    }
+    &__item{
+        margin-block: rem(4);
+    }
+}
+
+
+.socials{
+    @include flex-center-vertical;
+    gap:rem(20);
+    @include breakpoint-sm{
+        gap:rem(48);
+    }
+    @include breakpoint-md{
+       justify-content:space-between;
+       gap: 0; 
+    }
+    &__item{
+        @include dimensions(rem(48), rem(48));
+        @include border-radius(50%);
+        @include flex-center;
+        border:1px solid $clr-white;
+        
+        &:hover{
+            cursor: pointer;
+            background-color:$clr-primary;
+        }
+    }
+}

@@ -6,15 +6,19 @@
 
 
 .header{
-    background: $clr-primary;
     background: $clr-secondary;
-    // background: $clr-sea;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 2;
     width: 100%;
     padding-block:em(12);
+    @include transition(all, 0.4s, ease-in-out);
+    
+    &.sticks{
+        box-shadow: 0 1px 4px 0 #242424;
+    }
     &__logo{
         display: flex;
         height: 100%;
@@ -27,11 +31,8 @@
             mix-blend-mode: screen;
         }
     }
-    
-
     &__desktop-wrapper{
-        display: flex;
-        align-items: center;
+       @include flex-center-vertical;
         justify-content: space-between;
     }
 }

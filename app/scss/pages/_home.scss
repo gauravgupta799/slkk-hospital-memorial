@@ -17,7 +17,22 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        color:white;
+        color:$clr-white;
+    }
+    &__btns{
+        display: flex;
+        flex-wrap: wrap;
+        gap:rem(16);
+
+        @include breakpoint-sm{
+            gap:rem(24);
+        }
+        @include breakpoint-md{
+            gap:rem(36);
+        }
+        @include breakpoint-lg{
+            gap:rem(48);
+        }
     }
 }
 
@@ -30,4 +45,62 @@
 // Department styles
 .department{
     background: $clr-secondary;
+}
+
+// stats styles
+
+.counters{
+    background: $clr-secondary;
+
+    p{
+        font-size: rem(18);
+        font-weight: 500;
+        font-family: $ff-semiBold;
+        @include breakpoint-md{
+            font-size: rem(20);
+        }
+    }
+    &__wrapper{
+        @include flex-center;
+        flex-direction: column;
+    }
+}
+.count{
+    color:$clr-white;
+    font-family: $ff-extraBold;
+    &::after{
+        content: "+";
+        margin-left: rem(4);
+    }
+}
+
+// Reviews
+.reviews{
+
+    &__wrapper{
+        p{
+            padding-right: em(16);
+            @include breakpoint-sm{
+                padding-right: em(64);
+            }
+        }
+    }
+    &__figure{
+        display: flex;
+        align-items: center;
+        gap:rem(32);
+    }
+    &__imgWrapper{
+        width: 160px;
+        height: 160px;
+        @include border-radius(50%);
+        border:3px solid $clr-primary;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            @include border-radius(50%);
+        }
+    }
 }
