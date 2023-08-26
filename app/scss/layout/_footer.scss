@@ -18,6 +18,27 @@
     &__item{
         margin-block: rem(4);
     }
+    &__link{
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            height: 2px;
+            background: $clr-light-purple;
+            transform:scaleX(0);
+            transform-origin: left;
+            @include transition(transform, 0.35s, ease-out);
+        }
+        &:hover{
+            cursor: pointer;
+            &::before{
+                transform:scaleX(1);
+            }
+        }
+    }
 }
 
 
@@ -36,10 +57,13 @@
         @include border-radius(50%);
         @include flex-center;
         border:1px solid $clr-white;
-        
+        @include transition(background-color, 0.35s, ease-out);
         &:hover{
             cursor: pointer;
             background-color:$clr-primary;
         }
+    }
+    &__link{
+        @include flex-center;
     }
 }

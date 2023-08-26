@@ -7,7 +7,7 @@
 
 .nav{
     display: none;
-    @include transition(all, 0.4s, ease-in-out);
+    @include transition(all, 0.35s, ease-out);
     
     &.active{
         position: fixed;
@@ -38,6 +38,28 @@
             @include flex-center-vertical;
             flex-direction: column;
             gap:rem(36);
+        }
+    }
+    &__item{
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background: $clr-light-purple;
+            transform:scaleX(0);
+            transform-origin: left;
+            @include transition(transform, 0.35s, ease-out);
+        }
+
+        &:hover{
+            cursor: pointer;
+            &::before{
+                transform:scaleX(1);
+            }
         }
     }
     &__link{
