@@ -9,6 +9,7 @@
     background: $clr-white;
     padding:em(48) em(32) em(32);
     position: relative;
+    @include border-radius(4px);
 
     &__icon{
         position: absolute;

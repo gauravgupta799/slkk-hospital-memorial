@@ -18,7 +18,10 @@
     
     &.sticks{
         top: -1px;
-        box-shadow: 0 1px 4px 0 #242424;
+        box-shadow: 0 1px 4px 0 $clr-boxShdaow;
+        @include breakpoint-md{
+            top: 0;
+        }
     }
     &__logo{
         display: flex;

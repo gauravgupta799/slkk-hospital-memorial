@@ -71,6 +71,14 @@
     background: $clr-white;
 }
 
+.underline{
+    text-decoration: underline;
+    text-underline-offset: 20px;
+    text-decoration-color: #FF6347;
+    text-decoration-thickness: 4px;
+    -moz-text-decoration-color: #FF6347;
+}
+
 // .section-heading{
 //     margin: 0 auto;
 //     text-align: center;
