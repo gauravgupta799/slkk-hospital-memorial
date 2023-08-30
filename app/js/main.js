@@ -1,5 +1,13 @@
 document.getElementById("year").innerHTML = new Date().getFullYear();
 
+// preloader start
+window.onload =() => {
+    const preloader = document.querySelector(".preloader");
+    preloader.style.display ="none";
+}
+// preloader end
+
+// sticky navbar start
 window.addEventListener("scroll", function() {
     if(this.scrollY > 10){
         $(".header").addClass("sticks");
@@ -7,7 +15,9 @@ window.addEventListener("scroll", function() {
         $(".header").removeClass("sticks");
     }
 })
+// sticky navbar end
 
+// Toggle Nav Menu start
 $(document).ready(function(){
     $(".hamburger").click(function(){
         $(this).toggleClass("active");
@@ -16,6 +26,7 @@ $(document).ready(function(){
         $(".overlay").toggleClass("active");
     });
 })
+// Toggle Nav Menu end
 
 // Counter start
 const counterSection = document.querySelector(".counters");
@@ -43,7 +54,7 @@ if(counts != null && counterSection != null){
 }
 // Counter end
 
-
+// swiper start
 const swiper = new Swiper(".swiper-container", {
     slidePerView:1,
     spaceBetween:20,
@@ -54,3 +65,4 @@ const swiper = new Swiper(".swiper-container", {
         prevEl:".swiper-button-prev",
     },
 });
+// swiper end
