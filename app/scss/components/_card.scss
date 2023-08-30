@@ -8,9 +8,27 @@
 .card{
     background: $clr-white;
     padding:em(48) em(32) em(32);
+    position: relative;
 
     &__icon{
-
+        position: absolute;
+        top: -43px;
+        left: 50%;
+        @include dimensions(76px, 76px);
+        background-color: tomato;
+        border-radius: 2rem;
+        border-bottom-right-radius: 0;
+        color: $clr-white;
+        transform: translateX(-50%) rotate(45deg);
+        -webkit-transform: translateX(-50%) rotate(45deg);
+        -ms-transform: translateX(-50%) rotate(45deg);
+        @include breakpoint-md{
+            @include dimensions(86px, 86px);
+        }
+        span{
+            @include flex-center;
+            @include full-dimensions;
+        }
     }
     &__content{
         text-align: center;
