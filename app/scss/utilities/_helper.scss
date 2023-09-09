@@ -2,6 +2,7 @@
 @use '../abstract/breakpoints' as *; 
 @use '../abstract/functions' as *;
 @use "../abstract/fonts" as *;
+@use "../abstract/mixins" as *;
 
 .img-fluid{
     width: 100%;
@@ -60,7 +61,10 @@
 .d-cell{
     display: table-cell;
 }
-
+.flex-center{
+    @include flex-center;
+    gap: em(6);
+}
 .line{
     height: 2px;
 }

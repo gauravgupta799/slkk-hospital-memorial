@@ -65,6 +65,9 @@
     &__link{
         color:$clr-white;
     }
+    &__btnWrapper{
+        display: flex;
+    }
     &__btn{
         margin-top: rem(48);
         @include breakpoint-lg{

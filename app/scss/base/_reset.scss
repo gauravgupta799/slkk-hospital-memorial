@@ -96,12 +96,14 @@ button{
 //   font-family:$ff-regular;
 }
 
-
 ::placeholder{
   font-size: rem(18) !important;
-//   font-family:$ff-regular !important;
+  font-family:$ff-regular !important;
 }
 ::selection{
-//   color:$clr-white-100;
-//   background-color: $clr-primary;
+  color:$clr-white;
+  background-color: $clr-secondary
+}
+.main{
+  overflow: hidden;
 }

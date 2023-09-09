@@ -1,9 +1,41 @@
 document.getElementById("year").innerHTML = new Date().getFullYear();
 
+gsap.registerPlugin(ScrollTrigger);
+const tl = gsap.timeline();
 // preloader start
 window.onload =() => {
     const preloader = document.querySelector(".preloader");
     preloader.style.display ="none";
+
+    // hero animation
+    tl.from(".nav__item, .nav__btnWrapper", {
+        opacity:0,
+        y:-60,
+        duration:0.5,
+        stagger:0.1,
+        ease:Expo.easeOut
+    });
+    tl.from(".fade-left",{
+        opacity:0,
+        x:100,
+        duration:0.6,
+        ease:Power4.easeOut,
+    },"-=0.1");
+    tl.from(".fade-up",{
+        opacity:0,
+        y:60,
+        duration:0.6,
+        stagger:0.5,
+        ease:Power4.easeOut,
+    }, "-=0.3");
+    tl.from(".aside__item", {
+        opacity:0,
+        x:-50,
+        duration:0.2,
+        stagger:0.2,
+        ease:Expo.easeInOut
+    },"-=0.1");
+  
 }
 // preloader end
 
@@ -66,3 +98,95 @@ const swiper = new Swiper(".swiper-container", {
     },
 });
 // swiper end
+
+// Gsap ANimation start
+const fadeIn = gsap.utils.toArray(".fadeIn");
+fadeIn.forEach((content,i)=>{
+    const anim = gsap.from(content, {
+        opacity:0, duration:1
+    });
+    ScrollTrigger.create({
+        trigger:content,
+        animation:anim,
+        toggleActions:'play',
+        duration:1,
+        ease:Power4.easeOut
+    })
+});
+
+const fadeInLeft = gsap.utils.toArray(".fadeIn-left");
+fadeInLeft.forEach((content,i)=>{
+    const anim = gsap.from(content, {
+        opacity:0, duration:1,x:-50
+    });
+    ScrollTrigger.create({
+        trigger:content,
+        animation:anim,
+        toggleActions:'play',
+        duration:1,
+        ease:Power4.easeOut
+    })
+});
+
+const fadeUp = gsap.utils.toArray(".fadeUp");
+fadeUp.forEach((content,i)=>{
+    const anim = gsap.from(content, {
+        opacity:0, y:60, duration:1
+    });
+    ScrollTrigger.create({
+        trigger:content,
+        animation:anim,
+        toggleActions:'play',
+        duration:1,
+        stagger:1,
+        ease:Power4.easeOut
+    })
+});
+
+const imageReveal = gsap.utils.toArray(".img-reveal");
+imageReveal.forEach((content,i)=>{
+    const anim = gsap.fromTo(content, 
+        { opacity:0, left:"0%",},
+        { opacity:1, left:"100%", duration:1.5}
+        );
+    ScrollTrigger.create({
+        trigger:content,
+        animation:anim,
+        toggleActions:'play',
+        ease:Power4.easeOut
+    })
+});
+
+
+const slideLeft = gsap.utils.toArray(".slide-left");
+slideLeft.forEach((content,i)=>{
+    const anim = gsap.fromTo(content, 
+        { opacity:0, x:-50,},
+        { opacity:1, x:0, duration:1}
+        );
+    ScrollTrigger.create({
+        trigger:content,
+        animation:anim,
+        toggleActions:'play',
+        duration:1,
+        ease:Power4.easeOut
+    })
+});
+
+const slideRight = gsap.utils.toArray(".slide-right");
+slideRight.forEach((content,i)=>{
+    const anim = gsap.fromTo(content, 
+        { opacity:0, x:50,},
+        { opacity:1, x:0, duration:1}
+        );
+    ScrollTrigger.create({
+        trigger:content,
+        animation:anim,
+        toggleActions:'play',
+        duration:1,
+        ease:Power4.easeOut
+    })
+});
+
+
+

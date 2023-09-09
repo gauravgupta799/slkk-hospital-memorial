@@ -860,10 +860,26 @@ button {
 
 ::-moz-placeholder {
   font-size: 1.125rem !important;
+  font-family: "Poppins" !important;
 }
 
 ::placeholder {
   font-size: 1.125rem !important;
+  font-family: "Poppins" !important;
+}
+
+::-moz-selection {
+  color: #fff;
+  background-color: #4942E4;
+}
+
+::selection {
+  color: #fff;
+  background-color: #4942E4;
+}
+
+.main {
+  overflow: hidden;
 }
 
 h1 {
@@ -1189,6 +1205,13 @@ p, ul, ol, body {
 
 .d-cell {
   display: table-cell;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375em;
 }
 
 .line {
@@ -11183,6 +11206,7 @@ p, ul, ol, body {
 }
 .header.sticks {
   top: -1px;
+  padding-block: 0.40625em;
   box-shadow: 0 1px 4px 0 #242424;
 }
 @media only screen and (min-width: 48em) {
@@ -11303,13 +11327,41 @@ p, ul, ol, body {
   border-radius: 50%;
 }
 
+.img-hover {
+  position: relative;
+  overflow: hidden;
+}
+.img-hover img {
+  transition: transform 0.35s ease-in;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.img-hover:hover img {
+  transform: scale(1.065);
+}
+
+.wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-reveal {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background: #1524F0;
+  background: linear-gradient(to right, #1524F0 0%, #23538A 100%);
+}
+
 .preloader {
   position: fixed;
   inset: 0;
   width: 100%;
   height: 100vh;
   z-index: 10;
-  background: tomato;
+  background: #11009E;
   color: #fff;
   display: block;
 }
@@ -11496,6 +11548,9 @@ p, ul, ol, body {
 .nav__link {
   color: #fff;
 }
+.nav__btnWrapper {
+  display: flex;
+}
 .nav__btn {
   margin-top: 3rem;
 }
@@ -11610,6 +11665,9 @@ p, ul, ol, body {
 .btn--primary:hover {
   border-color: #fff;
 }
+.btn--primary:hover svg path {
+  fill: #fff;
+}
 
 .btn--secondry {
   background: #fff;
@@ -11617,6 +11675,43 @@ p, ul, ol, body {
 }
 .btn--secondry::before {
   background: #11009E;
+}
+
+.btn--form {
+  padding: 0.8em 2em;
+}
+
+.contact-form:nth-of-type(1) {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  color: #fff;
+  font-size: 1rem;
+}
+
+.form-control {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: solid 1px #C4B0F4;
+  background-color: #fff;
+  padding: 0.75em 1.25em;
+  margin-top: 1rem;
+  color: #050505;
+  font-size: 1.125rem;
+  font-family: "Poppins";
+  caret-color: #4942E4;
+}
+@media only screen and (min-width: 62em) {
+  .form-control {
+    padding: 0.875em 1.5em;
+  }
+}
+.form-control:focus {
+  border-color: #11009E;
 }
 
 .card {
@@ -11652,16 +11747,12 @@ p, ul, ol, body {
   width: 100%;
   height: 100%;
 }
-.card__content {
+.card__content h6 {
   text-align: center;
 }
 .card__heading {
   font-weight: 700;
 }
-.card__desc {
-  text-align: justify;
-}
-
 .swiper {
   position: static !important;
 }

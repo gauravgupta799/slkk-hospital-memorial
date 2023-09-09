@@ -10,7 +10,6 @@
     padding:em(48) em(32) em(32);
     position: relative;
     @include border-radius(4px);
-
     &__icon{
         position: absolute;
         top: -43px;
@@ -32,12 +31,14 @@
         }
     }
     &__content{
-        text-align: center;
+        h6{
+            text-align: center;
+        }
     }
     &__heading{
         font-weight: 700;
     }
     &__desc{
-        text-align: justify;
+       
     }
 }

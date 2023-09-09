@@ -104,3 +104,31 @@
         }
     }
 }
+
+.img-hover{
+    position: relative;
+    overflow: hidden;
+
+    img{
+       transition:transform 0.35s ease-in;
+       object-fit: cover;
+    }
+    &:hover{
+        img{
+            transform:scale(1.065);
+        }
+    }
+}
+.wrapper{
+    position: relative;
+    overflow: hidden;
+}
+.img-reveal{
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: #1524F0;
+    background: linear-gradient(to right, #1524F0 0%, #23538A 100%);
+}

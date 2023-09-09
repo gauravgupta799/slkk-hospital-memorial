@@ -49,6 +49,11 @@
     }
     &:hover{
         border-color: $clr-white;
+        svg{
+            path{
+                fill:$clr-white;
+            }
+        }
     }
 }
 
@@ -60,6 +65,9 @@
     }
 }
 
+.btn--form{
+    padding: 0.8em 2em;
+}
 // .btn--secondary{
 //     background:transparent;
 //     font-family:$ff-light;
