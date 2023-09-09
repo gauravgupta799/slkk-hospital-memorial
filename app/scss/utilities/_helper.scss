@@ -68,7 +68,6 @@
 .line{
     height: 2px;
 }
-
 .hr{
     height: 2px;
     border:none;
@@ -77,16 +76,9 @@
 
 .underline{
     text-decoration: underline;
-    text-underline-offset: 20px;
-    text-decoration-color: #FF6347;
+    text-underline-offset: 15px;
+    text-decoration-color: $clr-primary;
     text-decoration-thickness: 4px;
-    -moz-text-decoration-color: #FF6347;
+    -moz-text-decoration-color: $clr-primary;
 }
-
-// .section-heading{
-//     margin: 0 auto;
-//     text-align: center;
-//     font-family: $ff-light;
-//     font-weight: 300;
-// }
 

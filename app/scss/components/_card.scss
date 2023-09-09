@@ -10,24 +10,27 @@
     padding:em(48) em(32) em(32);
     position: relative;
     @include border-radius(4px);
+    @include transition(all, 0.4s, ease-out);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     &__icon{
         position: absolute;
         top: -43px;
         left: 50%;
         @include dimensions(76px, 76px);
-        background-color: tomato;
-        border-radius: 2rem;
+        background: $clr-primary;
+        @include border-radius(2rem);
         border-bottom-right-radius: 0;
         color: $clr-white;
         transform: translateX(-50%) rotate(45deg);
-        -webkit-transform: translateX(-50%) rotate(45deg);
-        -ms-transform: translateX(-50%) rotate(45deg);
         @include breakpoint-md{
             @include dimensions(86px, 86px);
         }
         span{
             @include flex-center;
             @include full-dimensions;
+        }
+        svg{
+            @include transform-rotate(-35deg);
         }
     }
     &__content{
@@ -38,7 +41,18 @@
     &__heading{
         font-weight: 700;
     }
-    &__desc{
-       
+    &:hover{
+        background: $clr-primary;
+        .card__content{
+            color:$clr-white;
+        }
+        .card__icon{
+            background: $clr-white;
+        }
+        svg{
+            path{
+                fill:$clr-primary;
+            }
+        }
     }
 }

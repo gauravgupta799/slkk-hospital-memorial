@@ -1226,10 +1226,10 @@ p, ul, ol, body {
 
 .underline {
   text-decoration: underline;
-  text-underline-offset: 20px;
-  text-decoration-color: #FF6347;
+  text-underline-offset: 15px;
+  text-decoration-color: #11009E;
   text-decoration-thickness: 4px;
-  -moz-text-decoration-color: #FF6347;
+  -moz-text-decoration-color: #11009E;
 }
 
 .m-1 {
@@ -11719,6 +11719,8 @@ p, ul, ol, body {
   padding: 3em 2em 2em;
   position: relative;
   border-radius: 4px;
+  transition: all 0.4s ease-out;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .card__icon {
   position: absolute;
@@ -11726,13 +11728,11 @@ p, ul, ol, body {
   left: 50%;
   width: 76px;
   height: 76px;
-  background-color: tomato;
+  background: #11009E;
   border-radius: 2rem;
   border-bottom-right-radius: 0;
   color: #fff;
   transform: translateX(-50%) rotate(45deg);
-  -webkit-transform: translateX(-50%) rotate(45deg);
-  -ms-transform: translateX(-50%) rotate(45deg);
 }
 @media only screen and (min-width: 48em) {
   .card__icon {
@@ -11747,12 +11747,28 @@ p, ul, ol, body {
   width: 100%;
   height: 100%;
 }
+.card__icon svg {
+  transform: rotate(-35deg);
+}
 .card__content h6 {
   text-align: center;
 }
 .card__heading {
   font-weight: 700;
 }
+.card:hover {
+  background: #11009E;
+}
+.card:hover .card__content {
+  color: #fff;
+}
+.card:hover .card__icon {
+  background: #fff;
+}
+.card:hover svg path {
+  fill: #11009E;
+}
+
 .swiper {
   position: static !important;
 }
