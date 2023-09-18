@@ -1,0 +1,28 @@
+@use '../abstract/breakpoints' as *;
+@use '../abstract/colors' as *;
+@use "../abstract/fonts" as *;
+@use '../abstract/functions' as *;
+@use '../abstract/mixins' as *;
+
+
+.contact{
+
+    &__mediums{
+        margin-bottom: rem(16);
+        @include breakpoint-md{
+            margin-bottom: rem(32);
+        }
+
+        p, address{
+            padding-left: 4em;
+            @include breakpoint-lg{
+                padding-left: 3em;
+            }
+        }
+    }
+    &__info{
+        display: flex;
+        align-items: center;
+        gap:2rem;
+    } 
+}

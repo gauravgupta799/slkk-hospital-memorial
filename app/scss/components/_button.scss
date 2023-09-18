@@ -43,6 +43,7 @@
 .btn--primary{
     background-color:$clr-white;
     color:$clr-black;
+    border:1px solid $clr-primary;
 
     &::before{
         background: $clr-primary;
