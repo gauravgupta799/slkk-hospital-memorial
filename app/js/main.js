@@ -87,7 +87,7 @@ if(counts != null && counterSection != null){
 // Counter end
 
 // swiper start
-const swiper = new Swiper(".swiper-container", {
+const swiper1 = new Swiper(".swiper-container", {
     slidePerView:1,
     spaceBetween:20,
     loop:true,
@@ -96,6 +96,15 @@ const swiper = new Swiper(".swiper-container", {
         nextEl:".swiper-button-next",
         prevEl:".swiper-button-prev",
     },
+});
+
+const swiper2 = new Swiper(".swiper-career", {
+    slidePerView:1,
+    loop:true,
+    // autoplay: {
+    //     delay: 2500,
+    //     disableOnInteraction: false,
+    // },
 });
 // swiper end
 

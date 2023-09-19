@@ -1,0 +1,22 @@
+@use '../abstract/breakpoints' as *;
+@use '../abstract/colors' as *;
+@use "../abstract/fonts" as *;
+@use '../abstract/functions' as *;
+@use '../abstract/mixins' as *;
+
+.career{
+    padding-top: em(58);
+    &__figure{
+        position: relative;
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: calc(100% - 11px);
+            background-color: $clr-black;
+            opacity: 0.55;
+        }
+    }
+}

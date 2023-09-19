@@ -14,8 +14,7 @@
 
     &__contents{
         height: 100%;
-        display: flex;
-        flex-direction: column;
+        @include flex-cloumn;
         justify-content: center;
         color:$clr-white;
     }
@@ -23,6 +22,7 @@
         display: flex;
         flex-wrap: wrap;
         gap:rem(16);
+        padding-bottom: 4px;
 
         @include breakpoint-sm{
             gap:rem(24);
