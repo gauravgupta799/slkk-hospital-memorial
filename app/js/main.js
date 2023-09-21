@@ -101,10 +101,10 @@ const swiper1 = new Swiper(".swiper-container", {
 const swiper2 = new Swiper(".swiper-career", {
     slidePerView:1,
     loop:true,
-    // autoplay: {
-    //     delay: 2500,
-    //     disableOnInteraction: false,
-    // },
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
 });
 // swiper end
 
